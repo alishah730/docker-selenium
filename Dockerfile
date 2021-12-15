@@ -43,6 +43,5 @@ WORKDIR /home/dev/selenium
 RUN ls -l
 RUN pwd
 RUN bazel build grid
-RUN find / -name '*selenium_server_deploy*'
 
 WORKDIR /home/dev
