@@ -38,3 +38,7 @@ WORKDIR /home/dev
 RUN git clone --depth 1 https://github.com/SeleniumHQ/selenium.git /home/dev/selenium
 RUN echo "build --//common:pin_browsers" >>/home/dev/selenium/.bazelrc.local
 RUN echo "build --//common:headless" >>/home/dev/selenium/.bazelrc.local
+
+RUN cd selenium
+RUN bazel build grid
+RUN find / -name '*selenium_server_deploy*'
