@@ -63,7 +63,7 @@ jobs:
   #       sarif_file: results.sarif
   push:
     # Ensure scan job passes before pushing image.
-    needs: scan
+    #needs: scan
 
     runs-on: ubuntu-latest
     if: github.event_name == 'push'
